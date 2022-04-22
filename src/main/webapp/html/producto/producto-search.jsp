@@ -1,25 +1,24 @@
  
-<%@ page import="com.jal.wholesales.model.*, com.company.wholesales.service.*,  java.util.*" %>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@page import="com.jal.wholesales.web.controller.*"%>
+<%@include file="/common/header.jsp"%>
+<body>
 
-            <% 
-            String nombreProducto = request.getParameter("nombre");
-            if(nombreProducto==null) {nombreProducto="";}
-            %>
-        <h3>Busqueda de productos</h3>
-        <form action="/WholeSalesWeb/ProductoServlet" method="post">
-            <input type="text" name="nombre" placeholder="Nombre del producto"> <br>
-            <input type="submit" value="submit">
-        </form>
-        <ul>
-         	<% 	if (nombreProducto!=null && nombreProducto!=""){
-                		List<Producto> productos = (List<Producto>)request.getAttribute("productos");
-                        for (Producto e: productos){
-                            %><li><a href="/WholeSalesWeb/html/producto/producto-details.jsp?" id=<%=e.getId()%>"><%=e.getNombre()%></a></li><%
-                        }
-                }
-         	else{
-         		%><p><%=request.getAttribute("error")%></p><%
-         	}
-      		%>
-            </ul>
- 
+<!-- busqueda de productos -->
+<div id="producto-search">
+	<form action="/WholeSalesWeb<%=ControllerPaths.PRODUCTO%>" method="post">
+	<input type="hidden" name="<%=ParameterNames.ACTION %>" value="<%=ActionNames.SEARCH%>"/>
+	
+	<p><input type="text" name="<%=ParameterNames.NOMBRE%>" placeholder=" "/></p>
+	 
+	<input type="submit" value="Buscar" name="Buscar"/>
+	
+		 
+	
+	
+	</form>
+</div>
+
+</body> 
+<%@include file="/common/footer.jsp"%>	

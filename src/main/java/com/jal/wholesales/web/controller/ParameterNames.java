@@ -21,6 +21,12 @@ public class ParameterNames {
 	public static final String ID_SECCION = "seccionId";
 	public static final String ID_MARCA = "marcaId";
 	public static final String ID_PAIS = "paisId";
-	public static final String ID_EMPRESA ="empresaId";
+ 
+	public static final String ID_PRODUCTO = "productoId";
+	public static final String UNIDADES = "unidades";
+	public static final String CATEGORIA="categoria";
+	public static final String SECCION="seccion";
+	public static final String MARCA="marca";
+	public static final String PAIS="pais";
  
 }

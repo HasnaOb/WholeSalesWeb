@@ -24,6 +24,7 @@ import com.jal.wholesales.web.SessionManager;
 import com.jal.wholesales.web.controller.utils.CookieManager;
 import com.wholesales.exception.DataException;
 import com.wholesales.exception.InvalidUserOrPasswordException;
+import com.wholesales.exception.ServiceException;
 
 import util.PasswordEncryptionUtil;
 /**
@@ -81,9 +82,9 @@ public class EmpresaServlet extends HttpServlet {
 					SessionManager.set(request, AttributeNames.EMPRESA, empresa);
 
 					if (keepAuthenticated!=null) {
-						CookieManager.setValue(response, "empresa", emailStr, 30*24*60*60); // Agujero!
+						CookieManager.setValue(response, AttributeNames.EMPRESA, emailStr, 30*24*60*60); // Agujero!
 					} else {
-						CookieManager.setValue(response, "empresa", emailStr, 0); 
+						CookieManager.setValue(response, AttributeNames.EMPRESA, emailStr, 0); 
 					}
 
 					targetView = ViewPaths.HOME;
@@ -113,19 +114,22 @@ public class EmpresaServlet extends HttpServlet {
 		//BUSQUEDA CRITERIA
 
 		else if (ActionNames.SEARCH.equalsIgnoreCase(action)) {	
+			
+		 
 			String nombreStr=request.getParameter(ParameterNames.NOMBRE);
-			String nombreUsuarioStr=request.getParameter(ParameterNames.NOMBRE_USUARIO);
-			String emailStr=request.getParameter(ParameterNames.EMAIL);
-			String contrasenaStr=request.getParameter(ParameterNames.CONTRASENA);
-			String cifStr=request.getParameter(ParameterNames.CIF);
-			String idTipoEmpresaStr=request.getParameter(ParameterNames.ID_TIPO_EMPRESA);
+//			String nombreUsuarioStr=request.getParameter(ParameterNames.NOMBRE_USUARIO);
+//			String emailStr=request.getParameter(ParameterNames.EMAIL);
+//			String contrasenaStr=request.getParameter(ParameterNames.CONTRASENA);
+//			String cifStr=request.getParameter(ParameterNames.CIF);
+//			String idTipoEmpresaStr=request.getParameter(ParameterNames.ID_TIPO_EMPRESA);
 
 
 
 
 			EmpresaCriteria e =new EmpresaCriteria();
-			e.setNombre(nombreUsuarioStr);
-			e.setIdTipoEmpresa(null);
+//			e.setNombre(nombreUsuarioStr);
+			e.setNombre(nombreStr);
+	//		e.setIdTipoEmpresa(null);
 
 			try {
 				List<Empresa> empresa = empresaService.findByCriteria(e);
@@ -133,8 +137,18 @@ public class EmpresaServlet extends HttpServlet {
 				targetView=ViewPaths.EMPRESA_RESULTS;
 
 
-			} catch (Exception ex) {
-				ex.printStackTrace();
+			} catch (DataException de) {
+				logger.error(de.getMessage(), de);
+				errors.addCommonError(Errors.ERROR_DATA);
+
+			}catch (ServiceException se) {
+				logger.error(se.getMessage(), se);
+				errors.addCommonError(Errors.ERROR_SERVICE);
+
+			}catch (Exception ex) {
+				logger.error(ex.getMessage(), ex);
+				errors.addCommonError(Errors.ERROR_E);
+			
 			}
 
 
@@ -202,6 +216,8 @@ public class EmpresaServlet extends HttpServlet {
 				empresa.setCif(cifStr);
 				empresa.setContrasena(contrasenaStr);
 				empresa.setIdTipoEmpresa(1L);
+				
+				
 
 
 

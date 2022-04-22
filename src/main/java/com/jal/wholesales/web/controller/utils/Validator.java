@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.commons.lang3.StringUtils;
+
 public class Validator {
 
 	private static final String PASSWORD_REGEX = 
@@ -57,4 +59,78 @@ public class Validator {
 		return v;
 		
 	}
+//	validacion categorias
+	
+	 
+	public static Integer validaInteger(String integerStr) {
+		
+		Integer i = null;
+		
+		if (!StringUtils.isBlank(integerStr)) {		
+			
+			integerStr = integerStr.trim();
+			
+			try {
+				i = Integer.parseInt(integerStr);
+				
+			} catch (NumberFormatException nfe) {
+				// No hace falta tracear
+			}
+		}
+		return i;
+	}
+	public static Long validaLong(String longStr) {
+
+		Long l = null;
+
+		if (!StringUtils.isBlank(longStr)) {
+
+			longStr = longStr.trim();
+
+			try{
+				l = Long.parseLong(longStr);
+
+			} catch (NumberFormatException nfe) {
+				// No hace falta tracear
+			}
+		}
+		return l;
+	}
+	
+	
+	public static String validaString(String stringStr) {
+		
+		String s = null;
+		
+		if (!StringUtils.isBlank(stringStr)) {
+			stringStr = stringStr.trim();
+			//TODO por ahora solo le valido la capacidad del varchar de bbdd, validar %65,.?¿!  tambien?
+			if(stringStr.length()<0 || stringStr.length()>80) {
+				s=null;
+			}else {
+				s = stringStr;
+			}
+		}
+		return s;
+	}
+	
+	public static Double validaDouble(String doubleStr) {
+
+		Double d = null;
+		
+		if (!StringUtils.isBlank(doubleStr)) {
+		
+			doubleStr = doubleStr.trim();
+			
+			try {
+				d = Double.parseDouble(doubleStr);
+	
+			} catch (NumberFormatException nfe) {
+				// No hace falta tracear
+			}
+		}
+		return d;
+	}
+
+
 }

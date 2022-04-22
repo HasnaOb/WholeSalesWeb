@@ -7,5 +7,7 @@ public class ActionNames {
 	public static final String SIGN_IN = "sign-in";
 	public static final String SIGN_OUT = "sign-out";
 	public static final String SIGN_UP= "sing_up";
+	public static final String ADD = "añadir";
+	 
  
 }

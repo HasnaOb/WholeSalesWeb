@@ -19,9 +19,10 @@ public class CookieManager {
 		return null;
 	}
 	
-	public static final void setValue(HttpServletResponse response, String name, String value, int ttl) {
+	public static final void 	setValue(HttpServletResponse response, String name, String value, int ttl) {
 		Cookie cookie = new Cookie(name, value); 
 		cookie.setMaxAge(ttl);
+		cookie.setPath("/");;
 		response.addCookie(cookie);
 	}
 //

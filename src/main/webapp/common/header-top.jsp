@@ -1,6 +1,6 @@
   <!-- Header Section Begin -->
-  
-  
+ 
+ 
   <%@page import="java.util.List, com.jal.wholesales.model.*, com.jal.wholesales.web.controller.*"%>   
   
     <header class="header-section header_back">
@@ -9,7 +9,7 @@
                 <div class="ht-left">
                     <div class="mail-service">	
                         <i class=" fa fa-envelope"></i>
-                    Atención al cliente: hasna.1310.ub@gmail.com
+                   <small> Atención al cliente: hasna.1310.ub@gmail.com</small>
                     </div>
                     <div class="phone-service">
                         <i class=" fa fa-phone"></i>
@@ -27,16 +27,13 @@
 			          	<a href="/WholeSalesWeb/user/login.jsp" class="login-panel"><i class="fa fa-user"> Iniciar Sesión </i></a>
                     	 
 			          <% } else { %>
-			          <form action="/WholeSalesWeb<%=ControllerPaths.EMPRESA%>" method="post">
+ 
 			          	<div class="icon user-profile">
 			            	<a href="/WholeSalesWeb/index.jsp" class="login-panel"> Mi perfil (<%=empresa.getNombre()%>) </a>
-			            	
-			            	  
-			            	 
-			            	<a href="index.jsp"class="login-panel"> <i class="fa fa-user"> Log out <input type="hidden"  value="<%=ActionNames.SIGN_OUT%>"/></i>  </a>
-			            	
+ 
+			            	<a href="/WholeSalesWeb/<%=ControllerPaths.EMPRESA%>?<%=ParameterNames.ACTION%>=<%=ActionNames.SIGN_OUT%>" class="login-panel"><i class="fa fa-user">Cerrar Sesión </i>  </a>
 			          	</div>
-			          	</form>
+		 
 			          <% } %>
 				 
                     <div class="lan-selector">
@@ -68,16 +65,29 @@
                     </div>
                     <div class="col-lg-7 col-md-7">
                         <div class="advanced-search">
-                         <form action="/WholeSalesWeb<%=ControllerPaths.EMPRESA%>" method="post">	
-                         
-                            <button type="button" class="category-btn">All Categories</button>
+                        
+                         <form action="/WholeSalesWeb<%=ControllerPaths.EMPRESA%>" method="post">
+                            <!--<button type="button" class="category-btn">All Categories</button>-->
+                            <select id="opciones" name="select" class="category-btn" style="height: 48px;">
+                            	<option value="">Buscador</option>
+                            	<option value="1">Producto</option>
+                            	<option value="2">Empresas</option>
+                            	<option value="3">Marcas</option>
+                            </select>
+                            
+                           <%
+                           
+                           %>
+                            
+                           
+                            	
                             <div class="input-group">
                              <input type="hidden" name="<%=ParameterNames.ACTION %>" value="<%=ActionNames.SEARCH%>"/>
                                 <input type="text" placeholder="What do you need?" name="<%=ParameterNames.NOMBRE%>">
                                 <button type="submit"><i class="ti-search"></i></button>
                             </div>
                           </form>
-                        </div>
+                        </div>	
                     </div>
                     <div class="col-lg-3 text-right col-md-3">
                         <ul class="nav-right">

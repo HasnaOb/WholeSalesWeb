@@ -31,16 +31,16 @@
     
     
      
-	<script src="/WholeSalesWeb/js/jquery-3.3.1.min.js"></script>
-    <script src="/WholeSalesWeb/js/bootstrap.min.js"></script>
-    <script src="/WholeSalesWeb/js/jquery-ui.min.js"></script>
-    <script src="/WholeSalesWeb/js/jquery.countdown.min.js"></script>
-    <script src="/WholeSalesWeb/js/jquery.nice-select.min.js"></script>
-    <script src="/WholeSalesWeb/js/jquery.zoom.min.js"></script>
-    <script src="/WholeSalesWeb/js/jquery.dd.min.js"></script>
-    <script src="/WholeSalesWeb/js/jquery.slicknav.js"></script>
-    <script src="/WholeSalesWeb/js/owl.carousel.min.js"></script>
-    <script src="/WholeSalesWeb/js/main.js"></script> 
+	<script src="<%=CONTEXT%>/js/jquery-3.3.1.min.js"></script>
+    <script src="<%=CONTEXT%>/js/bootstrap.min.js"></script>
+    <script src="<%=CONTEXT%>/js/jquery-ui.min.js"></script>
+    <script src="<%=CONTEXT%>/js/jquery.countdown.min.js"></script>
+    <script src="<%=CONTEXT%>/js/jquery.nice-select.min.js"></script>
+    <script src="<%=CONTEXT%>/js/jquery.zoom.min.js"></script>
+    <script src="<%=CONTEXT%>/js/jquery.dd.min.js"></script>
+    <script src="<%=CONTEXT%>/js/jquery.slicknav.js"></script>
+    <script src="<%=CONTEXT%>/js/owl.carousel.min.js"></script>
+    <script src="<%=CONTEXT%>/js/main.js"></script> 
     
 
  

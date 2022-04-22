@@ -1,4 +1,4 @@
-package model;
+package com.jal.wholesales.web.model;
 
 import com.jal.wholesales.model.Producto;
 

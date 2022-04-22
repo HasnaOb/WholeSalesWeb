@@ -112,6 +112,24 @@ ol {
 /*---------------------
   Helper CSS
 -----------------------*/
+.empresasDiv{
+	    border: 4px solid #b616a1;
+	    background-color: rgb(255, 234, 243);
+	    width:30%;
+	    margin: 50px 0px 50px 50px;
+	    text-align: center;
+}
+
+.ImgEmpresa{
+	height:25%;
+	width: 25%;
+	margin: 30px 0px 70px 30px;
+}
+
+.EmpresaDetails{
+	margin:-270px 0px 370px 500px;
+}
+	
 
 .section-title {
 	margin-bottom: 40px;
@@ -423,10 +441,6 @@ ol {
 
 .inner-header {
 	padding: 39px 0;
-}
-
-.inner-header .logo {
-	 margin: -40px 0px 0px 0px;
 }
 
 .inner-header .logo a {
@@ -1128,6 +1142,8 @@ ol {
 	opacity: 0.3;
 }
 
+.productos {
+	margin: 0px 0px 0px 0px}
 .product-slider .owl-nav button[type=button].owl-next {
 	left: auto;
 	right: -62px;
@@ -3916,17 +3932,26 @@ ol {
 	.nav-item .nav-menu li a {
 		padding: 16px 45px 15px;
 	}
+	.inner-header .logo {
+		 margin: -40px 0px 0px 0px;
+	}
 }
 
 @media only screen and (min-width: 1200px) {
 	.container {
 		max-width: 1170px;
 	}
+	.inner-header .logo {
+		 margin: -40px 0px 0px 0px;
+	}
 }
 
 /* Medium Device: 1200px */
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
+	.inner-header .logo {
+		 margin: -20px 0px 0px 0px;
+	}
 	.inner-header .advanced-search .category-btn {
 		max-width: 36%;
 	}
@@ -3963,6 +3988,9 @@ ol {
 }
 
 @media only screen and (max-width: 991px) {
+	.inner-header .logo {
+		 margin: -40px 0px 0px 0px;
+	}
 	.banner-section {
 		padding: 80px 0 50px;
 	}
@@ -4021,6 +4049,9 @@ ol {
 /* Tablet Device: 768px */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+	.inner-header .logo {
+		 margin: -5px 0px 0px 0px;
+	}
 	.header-top .ht-right .login-panel {
 		padding-left: 10px;
 	}
@@ -4079,6 +4110,9 @@ ol {
 /* Large Device: 480px */
 
 @media only screen and (max-width: 767px) {
+	.inner-header .logo {
+		 margin: 0px 0px 0px 0px;
+	}
 	.instagram-photo .insta-item {
 		width: 50%;
 		height: 300px;
@@ -4250,6 +4284,9 @@ ol {
 /* Small Device: 320px */
 
 @media only screen and (max-width: 479px) {
+	.inner-header .logo {
+		 margin: 0px 0px 0px 0px;
+	}
 	.instagram-photo .insta-item {
 		width: 100%;
 	}

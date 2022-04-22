@@ -1,3 +1,4 @@
+<%@page import="com.jal.wholesales.web.controller.*"%>
 <%@include file="/common/header.jsp"%>
 	 		
 		
@@ -150,6 +151,11 @@
 		                    </div>
 		                    <div class="product-list">
 		                        <div class="row">
+		                      <!--   <%
+		                       // Producto producto = (Producto) request.getAttribute(AttributeNames.PRODUCTO);
+		                        %> -->
+		                      <!--   <form action="/WholeSalesWeb<%=ControllerPaths.PRODUCTO%>" method="post">
+                        		<input type="hidden" name="<%=ParameterNames.ACTION %>" value="<%=ActionNames.SEARCH%>"/>-->
 		                            <div class="col-lg-4 col-sm-6">
 		                                <div class="product-item">
 		                                    <div class="pi-pic">
@@ -167,7 +173,7 @@
 		                                    <div class="pi-text">
 		                                        <div class="catagory-name">Towel</div>
 		                                        <a href="#">
-		                                            <h5>Pure Pineapple</h5>
+		                                            <h5><% //producto.getNombre()%></h5>
 		                                        </a>
 		                                        <div class="product-price">
 		                                            $14.00
@@ -176,6 +182,8 @@
 		                                    </div>
 		                                </div>
 		                            </div>
+		                            
+		                          </form>
 		                            <div class="col-lg-4 col-sm-6">
 		                                <div class="product-item">
 		                                    <div class="pi-pic">

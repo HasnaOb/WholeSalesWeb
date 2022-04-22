@@ -1,18 +1,30 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@include file="/common/header.jsp"%>
+ 
 <%@ page import="java.util.List, com.jal.wholesales.model.Empresa" %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
+<%@ page import="java.util.List, com.jal.wholesales.model.Producto" %>
+<%@page import="com.jal.wholesales.web.controller.*"%>
+ 
+ 
+ 
 <body>
 <%
-	Empresa e = (Empresa) request.getAttribute("empresas");
+	Empresa e = (Empresa) request.getAttribute(AttributeNames.EMPRESA);
+ 
 %>
-<h3><%=e.getNombre()%></h3>
-<p><%=e.getCif() %></p>
+		<div class="ImgEmpresa">
+		
+			<img src="Imagenes/empresa.jpg">
+		</div>
+		<div class="EmpresaDetails">
+			<h2><%=e.getNombre()%></h2>
+			<h4><%=e.getCif() %></h4>
+			
+			 
+			<p><%=e.getEmail() %></p>
+		 
+		</div>
 
-</body>
-</html>
+</body><br><br>
+
+<%@include file="/common/footer.jsp"%>
+ 
