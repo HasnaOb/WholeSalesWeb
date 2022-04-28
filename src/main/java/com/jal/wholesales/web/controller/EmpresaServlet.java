@@ -17,7 +17,7 @@ import org.apache.logging.log4j.util.Strings;
 
 import com.company.wholesales.service.EmpresaService;
 import com.company.wholesales.service.impl.EmpresaServiceImpl;
-import com.google.gson.Gson;
+
 import com.jal.wholesales.model.Empresa;
 import com.jal.wholesales.service.EmpresaCriteria;
 import com.jal.wholesales.web.SessionManager;
