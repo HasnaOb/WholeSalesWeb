@@ -487,12 +487,12 @@ ol {
 }
 
 .inner-header .advanced-search .input-group {
-	max-width: 70%;
+	max-width: 99%;
 	height: 100%;
 }
 
 .inner-header .advanced-search .input-group input {
-	width: 100%;
+	width: 95%;
 	height: 49px;
 	 
 	border: 2px solid white;
@@ -3956,7 +3956,7 @@ ol {
 		max-width: 36%;
 	}
 	.inner-header .advanced-search .input-group {
-		max-width: 64%;
+		max-width: 100%;
 	}
 	.nav-item .nav-menu li a {
 		padding: 16px 26px 15px;
@@ -4072,7 +4072,7 @@ ol {
 		padding-right: 25px;
 	}
 	.inner-header .advanced-search .input-group {
-		max-width: 60%;
+		max-width: 100%;
 	}
 	.inner-header .nav-right li {
 		margin-left: 8px;

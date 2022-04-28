@@ -14,4 +14,7 @@ public class AttributeNames {
 		public static final String LOCALE = "locale";
 
 		public static final String PRODUCTO = "producto";
+		
+		public static final String PRODUCTO_CRITERIA = "producto_criteria";
+		
 }

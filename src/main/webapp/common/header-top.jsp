@@ -33,17 +33,13 @@
  
 			            	<a href="/WholeSalesWeb/<%=ControllerPaths.EMPRESA%>?<%=ParameterNames.ACTION%>=<%=ActionNames.SIGN_OUT%>" class="login-panel"><i class="fa fa-user">Cerrar Sesión </i>  </a>
 			          	</div>
+			          	
+			          	
+			          	
 		 
 			          <% } %>
 				 
-                    <div class="lan-selector">
-                        <select class="language_drop" name="countries" id="countries" style="width:100px;">
-                            <option value='yt' data-image="img/flag-1.jpg" data-imagecss="flag yt"
-                                data-title="English">English</option>
-                            <option value='yu' data-image="img/flag-2.jpg" data-imagecss="flag yu"
-                                data-title="Bangladesh">German </option>
-                        </select>
-                    </div>
+              
                     <div class="top-social">
                         <a href="https://www.facebook.com" target="_black"><i class="ti-facebook"></i></a>
                         <a href="https://www.twitter.com" target="_black"><i class="ti-twitter-alt"></i></a>
@@ -66,24 +62,12 @@
                     <div class="col-lg-7 col-md-7">
                         <div class="advanced-search">
                         
-                         <form action="/WholeSalesWeb<%=ControllerPaths.EMPRESA%>" method="post">
-                            <!--<button type="button" class="category-btn">All Categories</button>-->
-                            <select id="opciones" name="select" class="category-btn" style="height: 48px;">
-                            	<option value="">Buscador</option>
-                            	<option value="1">Producto</option>
-                            	<option value="2">Empresas</option>
-                            	<option value="3">Marcas</option>
-                            </select>
-                            
-                           <%
-                           
-                           %>
-                            
-                           
+             		 <form action="/WholeSalesWeb<%=ControllerPaths.PRODUCTO%>" method="post">
+                         
                             	
                             <div class="input-group">
                              <input type="hidden" name="<%=ParameterNames.ACTION %>" value="<%=ActionNames.SEARCH%>"/>
-                                <input type="text" placeholder="What do you need?" name="<%=ParameterNames.NOMBRE%>">
+                                <input type="text" placeholder="What do you need?" name="<%=ParameterNames.NOMBRE_PRODUCTO%>">
                                 <button type="submit"><i class="ti-search"></i></button>
                             </div>
                           </form>

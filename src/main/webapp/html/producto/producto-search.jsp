@@ -10,7 +10,10 @@
 	<form action="/WholeSalesWeb<%=ControllerPaths.PRODUCTO%>" method="post">
 	<input type="hidden" name="<%=ParameterNames.ACTION %>" value="<%=ActionNames.SEARCH%>"/>
 	
-	<p><input type="text" name="<%=ParameterNames.NOMBRE%>" placeholder=" "/></p>
+	<p><input type="text" name="<%=ParameterNames.NOMBRE_PRODUCTO%>" placeholder="Nombre del producto"/></p>
+	<p><input type="text" name="<%=ParameterNames.DESCRIPCION%>" placeholder="Buscar por descripcion"/></p>
+	<p><input type="text" name="<%=ParameterNames.MARCA%>" placeholder="Buscar por marca "/></p>
+	<p><input type="text" name="<%=ParameterNames.PRECIO%>" placeholder="Buscar por precio "/></p>
 	 
 	<input type="submit" value="Buscar" name="Buscar"/>
 	

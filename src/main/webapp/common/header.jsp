@@ -30,6 +30,11 @@
     <link rel="stylesheet" href="<%=CONTEXT%>/css/style.css" type="text/css">
     
     
+         <!-- Css 2 Styles -->
+         
+         
+      
+     <!-- Js principal -->
      
 	<script src="<%=CONTEXT%>/js/jquery-3.3.1.min.js"></script>
     <script src="<%=CONTEXT%>/js/bootstrap.min.js"></script>
@@ -41,6 +46,8 @@
     <script src="<%=CONTEXT%>/js/jquery.slicknav.js"></script>
     <script src="<%=CONTEXT%>/js/owl.carousel.min.js"></script>
     <script src="<%=CONTEXT%>/js/main.js"></script> 
+    
+    
     
 
  

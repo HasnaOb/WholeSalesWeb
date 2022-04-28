@@ -2,6 +2,9 @@
  
  
   <!-- Product Shop Section Begin -->
+  <%
+	Producto p = (Producto) request.getAttribute(AttributeNames.PRODUCTO);
+%>
     <section class="product-shop spad page-details">
         <div class="container">
             <div class="row">

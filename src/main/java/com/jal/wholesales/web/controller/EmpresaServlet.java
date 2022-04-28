@@ -23,6 +23,7 @@ import com.jal.wholesales.service.EmpresaCriteria;
 import com.jal.wholesales.web.SessionManager;
 import com.jal.wholesales.web.controller.utils.CookieManager;
 import com.wholesales.exception.DataException;
+import com.wholesales.exception.InstanceNotFoundException;
 import com.wholesales.exception.InvalidUserOrPasswordException;
 import com.wholesales.exception.ServiceException;
 
@@ -230,6 +231,34 @@ public class EmpresaServlet extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+		} else if (ActionNames.UPDATE.equalsIgnoreCase(action)) {
+			Empresa empresa = (Empresa) SessionManager.get(request, AttributeNames.EMPRESA);
+			targetView = ViewPaths.EMPRESA_UPDATE;
+			Empresa empresaCreate= empresa;
+			
+			empresaCreate.setNombre(empresa.getNombre());
+			empresaCreate.setNombreUsuario(empresa.getNombreUsuario());
+			empresaCreate.setContrasena(empresa.getContrasena());
+			empresaCreate.setCif(empresa.getCif());
+			
+			if (!errors.hasErrors()) {
+				try {
+					empresaService.update(empresaCreate);
+					SessionManager.set(request, AttributeNames.EMPRESA, empresaCreate);
+					targetView = ViewPaths.HOME;
+				} catch (InstanceNotFoundException unfe) {
+					logger.error("Empresa Update: ", unfe.getMessage(), unfe);
+					errors.addCommonError(Errors.ERROR_EMPRESA_NOT_FOUND_EXCEPTION);
+				} catch (DataException de) {
+					logger.error("Empresa Update: ", de.getMessage(), de);
+					errors.addCommonError(Errors.ERROR_DATA);
+				} catch (ServiceException e) {
+					logger.error("Empresa Update: ", e.getMessage(), e);
+					errors.addCommonError(Errors.ERROR_E);
+					 
+				}
+			}
+			
 		}
 		
 		if (redirect) {

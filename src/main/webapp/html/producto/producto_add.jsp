@@ -1,16 +1,20 @@
+
+<%@page import="com.jal.wholesales.web.SessionManager"%>
+<%@include file="/common/header.jsp"%>	
+
+
 <%@page import="com.jal.wholesales.web.controller.*"%>
 
 
-<%@include file="/common/header.jsp"%>	
 	
 	
 	<div class="register-login-section spad">
-	        <div class="container">
+	        <div class="container">	
 	            <div class="row">
 	                <div class="col-lg-6 offset-lg-3">
 	                    <div class="register-form">
 	                        <h2>Alta de productos</h2>
-	                           <form action="/WholeSalesWeb<%=ControllerPaths.PRODUCTO%>" method="post">
+	                           <form action="/WholeSalesWeb<%=ControllerPaths.PRIVATE_PRODUCTO%>" method="post">
 	                           	<input type="hidden" name="action" value="<%=ActionNames.CREATE %>"/>
 	
 	
@@ -65,18 +69,7 @@
 	                                    </select>
 	                              </label>
 	                            </div>
-	                            
-	                               <div class="group-input">
-	                                <label for="tipoEmpresa">País *
-	                                    <select name= name="<%=ParameterNames.EMPRESA_ID %>">
-	
-	                                        <option value="1">Empresa</option>
-	                                        <option value="2">Tienda</option>
-	                                         
-	 	
-	                                    </select>
-	                              </label>
-	                            </div>
+
 	                            
 	                            <input type="file" name="fotos" id="fotos" multiple/><br><br>
 	                            <button type="submit" class="site-btn register-btn">Dar Alta</button>

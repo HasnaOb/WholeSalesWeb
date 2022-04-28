@@ -3,13 +3,8 @@
     pageEncoding="ISO-8859-1"%>
 <%@ page import="java.util.List, com.jal.wholesales.model.Producto" %>
 <%@page import="com.jal.wholesales.web.controller.*"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
+ 
+ <body>
 <%
 	Producto p = (Producto) request.getAttribute(AttributeNames.PRODUCTO);
 %>
@@ -22,9 +17,9 @@
 		                                            <i class="icon_heart_alt"></i>
 		                                        </div>
 		                                        <ul>
-		                                            <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
-		                                            <li class="quick-view"><a href="#">+ Quick View</a></li>
-		                                            <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
+		                                            <li class="w-icon active"><a href="product_Info.jsp"><i class="icon_bag_alt"></i></a></li>
+		                                            <li class="quick-view"><a href="product_Info.jsp">+ Quick View</a></li>
+		                                            <li class="w-icon"><a href="product_Info.jsp"><i class="fa fa-random"></i></a></li>
 		                                        </ul>
 		                                    </div>
 		                                    <div class="pi-text">
@@ -42,5 +37,5 @@
  
 
 </body>
-</html>  
+   
 <%@include file="/common/footer.jsp"%>

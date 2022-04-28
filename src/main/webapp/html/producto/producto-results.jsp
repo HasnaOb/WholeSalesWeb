@@ -1,4 +1,4 @@
- 
+<%@include file="/common/header.jsp"%> 
   
 <%@ page import="java.util.List, com.jal.wholesales.model.Producto" %>
 <%@page import="com.jal.wholesales.web.controller.*"%>
@@ -22,5 +22,7 @@
 	<%	
 	}
 %>
+
+<%@include file="/common/footer.jsp"%>	
  
   

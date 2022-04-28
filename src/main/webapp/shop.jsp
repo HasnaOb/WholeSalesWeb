@@ -8,10 +8,12 @@
 		        <div class="container">
 		            <div class="row">
 		                <div class="col-lg-3 col-md-6 col-sm-8 order-2 order-lg-1 produts-sidebar-filter">
+		                <form action="/WholeSalesWeb<%=ControllerPaths.PRODUCTO%>" method="post">
+                        		<input type="hidden" name="<%=ParameterNames.ACTION %>" value="<%=ActionNames.SEARCH%>"/>
 		                    <div class="filter-widget">
 		                        <h4 class="fw-title">Categories</h4>
 		                        <ul class="filter-catagories">
-		                            <li><a href="#">Men</a></li>
+		                            <li><a href="<%= %>">Men</a></li>
 		                            <li><a href="#">Women</a></li>
 		                            <li><a href="#">Kids</a></li>
 		                        </ul>
@@ -66,8 +68,13 @@
 		                                <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span>
 		                            </div>
 		                        </div>
-		                        <a href="#" class="filter-btn">Filter</a>
+		                         
 		                    </div>
+		                    
+		                     <button type="submit" class="filter-btn">Filter</button>
+		                     
+		                     
+		                 </form>    
 		                    <div class="filter-widget">
 		                        <h4 class="fw-title">Color</h4>
 		                        <div class="fw-color-choose">

@@ -49,5 +49,7 @@ public interface Errors {
 	public static final String ERROR_SECCION = "La seccion es un dato obligatorio";
 	public static final String ERROR_MARCA = "La marca es un dato obliagtorio";
 	public static final String ERROR_PAIS = "El pais es un dato obliagtorio";
+	public static final String ERROR_EMPRESA_NOT_FOUND_EXCEPTION = "Empresa No Encontrada";
+ 
 	
 }

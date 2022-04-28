@@ -17,7 +17,6 @@ import com.company.wholesales.service.ProductoService;
 import com.company.wholesales.service.impl.ProductoServiceImpl;
 import com.jal.wholesales.model.Empresa;
 import com.jal.wholesales.model.Producto;
-import com.jal.wholesales.model.ProductoDTO;
 import com.jal.wholesales.service.ProductoCriteria;
 import com.jal.wholesales.web.SessionManager;
 import com.jal.wholesales.web.controller.utils.Validator;
@@ -58,11 +57,11 @@ public class ProductoServlet extends HttpServlet {
 			
 			
 			String nombreStr = request.getParameter(ParameterNames.NOMBRE_PRODUCTO);
-//			String descripcionStr = request.getParameter(ParameterNames.DESCRIPCION);
-//			String precioStr = request.getParameter(ParameterNames.PRECIO);
+			String descripcionStr = request.getParameter(ParameterNames.DESCRIPCION);
+			String precioStr = request.getParameter(ParameterNames.PRECIO);
 //			String idCategoriaStr = request.getParameter(ParameterNames.ID_CATEGORIA);
 //			String idSeccionStr = request.getParameter(ParameterNames.ID_SECCION);
-//			String idMarcaStr = request.getParameter(ParameterNames.ID_MARCA);
+			String idMarcaStr = request.getParameter(ParameterNames.ID_MARCA);
 //			String idPaisStr = request.getParameter(ParameterNames.ID_PAIS);
 //			String idEmpresaStr = request.getParameter(ParameterNames.ID_EMPRESA);
 //			
@@ -71,14 +70,14 @@ public class ProductoServlet extends HttpServlet {
 			if (!StringUtils.isBlank(nombreStr)) {
 				nombre=Validator.validaInteger(nombreStr);
 			}
-//			Integer descripcion=null;
-//			if (!StringUtils.isBlank(descripcionStr)) {
-//				descripcion=Validator.valInteger(descripcionStr);
-//			}
-//			Integer precio=null;
-//			if (!StringUtils.isBlank(precioStr)) {
-//				precio=Validator.valInteger(precioStr);
-//			}
+			Integer descripcion=null;
+			if (!StringUtils.isBlank(descripcionStr)) {
+				descripcion=Validator.validaInteger(descripcionStr);
+			}
+			Double precio=null;
+			if (!StringUtils.isBlank(precioStr)) {
+				precio=Validator.validaDouble(precioStr);
+			}
 //			Integer idCategoria=null;
 //			if (!StringUtils.isBlank(idCategoriaStr)) {
 //				idCategoria=Validator.valInteger(idCategoriaStr);
@@ -87,10 +86,10 @@ public class ProductoServlet extends HttpServlet {
 //			if (!StringUtils.isBlank(idSeccionStr)) {
 //				idSeccion=Validator.valInteger(idSeccionStr);
 //			}
-//			Integer idMarca=null;
-//			if (!StringUtils.isBlank(idMarcaStr)) {
-//				idMarca=Validator.valInteger(idMarcaStr);
-//			}
+			Integer idMarca=null;
+			if (!StringUtils.isBlank(idMarcaStr)) {
+				idMarca=Validator.validaInteger(idMarcaStr);
+			}
 //			Integer idPais=null;
 //			if (!StringUtils.isBlank(idPaisStr)) {
 //				idPais=Validator.valInteger(idPaisStr);
@@ -106,12 +105,12 @@ public class ProductoServlet extends HttpServlet {
 		
 		ProductoCriteria pc = new ProductoCriteria();
 		pc.setNombre(nombreStr);
-//		pc.setDescripcion(null);
+		pc.setDescripcion(descripcionStr);
 //		// HAY Q CORRIGIR ESTO 
-//		pc.setPrecio(null);
+		pc.setPrecio(precio);
 //		pc.setIdCategoria(null);
 //		pc.setIdSeccion(null);
-//		pc.setIdMarca(null);
+//		pc.setIdMarca(idMarcaStr);
 //		pc.setIdEmpresa(null);
 //		
 //		
