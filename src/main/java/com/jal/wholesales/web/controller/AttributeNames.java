@@ -1,4 +1,4 @@
-	package com.jal.wholesales.web.controller;
+package com.jal.wholesales.web.controller;
 
 public class AttributeNames {
 		public static final String EMPRESA="empresas";

@@ -154,8 +154,7 @@ public class EmpresaServlet extends HttpServlet {
 
 
 		}else if (ActionNames.DETAIL.equalsIgnoreCase(action)) {
-
-			//VISTA EN DETALLE
+ 
 
 			String empresaIdStr=request.getParameter(ParameterNames.EMPRESA_ID);
 			System.out.println("empresaIdStr= "+empresaIdStr);
@@ -174,29 +173,7 @@ public class EmpresaServlet extends HttpServlet {
 			}
 
 
-
-
-//					} else if (ActionNames.SIGN_IN.equalsIgnoreCase(action)) {
-//			//			System.out.println(request.getRemoteAddr()+" pulsou");
-//			//			response.sendRedirect("http://www.lavozdegalicia.com");
-//			//		
-//						String emailStr = request.getParameter(ParameterNames.EMAIL);
-//						String contrasenaStr = request.getParameter(ParameterNames.CONTRASENA);
-//						try {
-//							System.out.println("Autenticando a "+emailStr+"...");
-//							Empresa empresa = empresaService.login(emailStr, contrasenaStr);
-//							System.out.println(emailStr+": Empresa = "+empresa);
-//			
-//			                SessionManager.set(request, AttributeNames.EMPRESA, empresa);
-//			                request.setAttribute(action, action);
-//			
-//							targetView = ViewPaths.HOME;
-//						} catch (Exception e) {
-//							// TODO
-//							e.printStackTrace();
-//							//llevaria a una vista rollo error
-//							targetView = ViewPaths.SIGN_IN;
-//						}		
+ 
 		}else if (ActionNames.SIGN_UP.equalsIgnoreCase(action)) {
 
 			targetView=ViewPaths.SIGN_IN;
