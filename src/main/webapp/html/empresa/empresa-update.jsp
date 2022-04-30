@@ -25,11 +25,6 @@
 	                            </div>
 	
 	                            <div class="group-input">
-	                                <label for="email">Email *</label>
-	                                <input type="email"  name="<%=ParameterNames.EMAIL%>" id="email">
-	                            </div>
-	
-	                            <div class="group-input">
 	                                <label for="pass">Contaseña *</label>
 	                                <input type="password"   name="<%=ParameterNames.CONTRASENA %>" id="contrasena">
 	                            </div>
