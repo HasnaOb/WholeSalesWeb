@@ -222,6 +222,7 @@ public class EmpresaServlet extends HttpServlet {
 			if(cif!=null && cif != "") {
 				empresaCreate.getCif();
 			}
+			targetView = ViewPaths.HOME;
 
 			if (!errors.hasErrors()) {
 				try {

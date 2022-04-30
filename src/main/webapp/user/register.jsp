@@ -36,7 +36,7 @@
 	                            </div>
 	                            <div class="group-input">
 	                                <label for="tipoEmpresa">Tipo Empresa *
-	                                    <select name= name="<%=ParameterNames.ID_TIPO_EMPRESA %>">
+	                                    <select name="<%=ParameterNames.ID_TIPO_EMPRESA %>">
 	
 	                                        <option value="1">Tienda</option>
 	                                        
