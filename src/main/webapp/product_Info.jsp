@@ -5,6 +5,7 @@
   <%
 	Producto p = (Producto) request.getAttribute(AttributeNames.PRODUCTO);
 %>
+ 
     <section class="product-shop spad page-details">
         <div class="container">
             <div class="row">
@@ -23,9 +24,9 @@
                             <div class="product-thumbs">
                                 <div class="product-thumbs-track ps-slider owl-carousel">
                                     <div class="pt active" data-imgbigurl="img/product-single/product-1.jpg"><img
-                                            src="Imagenes/Sudaderas/foto1.jpg" alt=""></div>
+                                            src="Imagenes/imgDetalle/<%=p.getId() %>/prin.jpg" alt=""></div>
                                     <div class="pt" data-imgbigurl="img/product-single/product-2.jpg"><img
-                                            src="img/product-single/product-2.jpg" alt=""></div>
+                                            src="Imagenes/imgDetalle/<%=p.getId() %>/prin2.jpg" alt=""></div>
                                     <div class="pt" data-imgbigurl="img/product-single/product-3.jpg"><img
                                             src="img/product-single/product-3.jpg" alt=""></div>
                                     <div class="pt" data-imgbigurl="img/product-single/product-3.jpg"><img
@@ -37,7 +38,7 @@
                             <div class="product-details">
                                 <div class="pd-title">
                                     <span>oranges</span>
-                                    <h3>Pure Pineapple</h3>
+                                    <h3><%=p.getNombre()%></h3>
                                     <a href="#" class="heart-icon"><i class="icon_heart_alt"></i></a>
                                 </div>
                                 <div class="pd-rating">
@@ -49,9 +50,8 @@
                                     <span>(5)</span>
                                 </div>
                                 <div class="pd-desc">
-                                    <p>Lorem ipsum dolor sit amet, consectetur ing elit, sed do eiusmod tempor sum dolor
-                                        sit amet, consectetur adipisicing elit, sed do mod tempor</p>
-                                    <h4>$495.00 <span>629.99</span></h4>
+                                    <p><%=p.getDescripcion() %></p>
+                                    <h4><%=p.getPrecio() %>$<span>629.99</span></h4>
                                 </div>
                                  
                                 <div class="pd-size-choose">

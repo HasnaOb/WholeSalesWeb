@@ -16,5 +16,16 @@ public class AttributeNames {
 		public static final String PRODUCTO = "producto";
 		
 		public static final String PRODUCTO_CRITERIA = "producto_criteria";
+
+		public static final String TOTAL_PAGES = "total_pages";
+
+		public static final String CURRENT_PAGE = "current_page";
+
+		public static final String PAGING_FROM = "paging_from";
+
+		public static final String PAGING_TO = "paging_to";
+
+		public static final String MARCA = "marca";
+		public static final String SECCION = "seccion";
 		
 }

@@ -131,6 +131,52 @@ public class Validator {
 		}
 		return d;
 	}
-
+	public static String validacionNombre(String nombreStr) {
+		
+		String s = null;
+		
+		if (!StringUtils.isBlank(nombreStr)) {
+			nombreStr = nombreStr.trim();
+			 
+			if (nombreStr.length()<=0 || nombreStr.length()>80) {
+				s=null;
+			}else {
+				s = nombreStr;
+			}
+		}
+		return s;
+	}
+	
+	public static String validacionDescripcion(String descripcionStr) {
+		
+		String s = null;
+		
+		if (!StringUtils.isBlank(descripcionStr)) {
+			descripcionStr = descripcionStr.trim();
+			 
+			if (descripcionStr.length()<=0 || descripcionStr.length()>256) {
+				s=null;
+			}else {
+				s = descripcionStr;
+			}
+		}
+		return s;
+	}
+	
+	public static String validacionEmail(String emailStr) {
+		
+		String s = null;
+		
+		if (!StringUtils.isBlank(emailStr)) {
+			emailStr = emailStr.trim();
+			 
+			if (emailStr.length()<=0 || emailStr.length()>80) {
+				s=null;
+			}else {
+				s = emailStr;
+			}
+		}
+		return s;
+	}
 
 }

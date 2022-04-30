@@ -9,10 +9,9 @@
 	            <div class="row">
 	                <div class="col-lg-6 offset-lg-3">
 	                    <div class="register-form">
-	                        <h2>Register</h2>
+	                        <h2>Actualizar Perfil</h2>
 	                           <form action="/WholeSalesWeb<%=ControllerPaths.EMPRESA%>" method="post">
-	                           	<input type="hidden" name="action" value="<%=ActionNames.SIGN_UP %>"/>
-	
+	                           	<input type="hidden" name="action" value="<%=ActionNames.UPDATE %>"/>
 	
 	
 	                            <div class="group-input">
@@ -49,11 +48,9 @@
 	                                <label for="cif">CIF *</label>
 	                                <input type="text"  name="<%=ParameterNames.CIF %>" id="cif">
 	                            </div>
-	                            <button type="submit" class="site-btn register-btn">REGISTER</button>
+	                            <button type="submit" class="site-btn register-btn">Actualizar</button>
 	                        </form>
-	                        <div class="switch-login">
-	                            <a href="./login.html" class="or-login">Or Login</a>
-	                        </div>
+	                         
 	                    </div>
 	                </div>
 	            </div>

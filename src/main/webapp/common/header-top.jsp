@@ -3,6 +3,8 @@
  
   <%@page import="java.util.List, com.jal.wholesales.model.*, com.jal.wholesales.web.controller.*"%>   
   
+  
+  
     <header class="header-section header_back">
         <div class="header-top">
             <div class="container">
@@ -29,10 +31,16 @@
 			          <% } else { %>
  
 			          	<div class="icon user-profile">
-			            	<a href="/WholeSalesWeb/index.jsp" class="login-panel"> Mi perfil (<%=empresa.getNombre()%>) </a>
+			            	<a href="/WholeSalesWebindex.jsp" class="login-panel"> Mi perfil (<%=empresa.getNombre()%>) </a>
+			            	<a href="/WholeSalesWeb/<%=ViewPaths.EMPRESA_UPDATE %>" >Actualizar perfil</a>
  
 			            	<a href="/WholeSalesWeb/<%=ControllerPaths.EMPRESA%>?<%=ParameterNames.ACTION%>=<%=ActionNames.SIGN_OUT%>" class="login-panel"><i class="fa fa-user">Cerrar Sesión </i>  </a>
+			            	
+			            		<a href="/WholeSalesWeb/<%=ControllerPaths.EMPRESA%>?<%=ParameterNames.ACTION%>=<%=ActionNames.DELETE%>" class="login-panel"><i class="fa fa-user">Darse de baja </i>  </a>
 			          	</div>
+			          	
+			          	
+			          	
 			          	
 			          	
 			          	
@@ -69,6 +77,8 @@
                              <input type="hidden" name="<%=ParameterNames.ACTION %>" value="<%=ActionNames.SEARCH%>"/>
                                 <input type="text" placeholder="What do you need?" name="<%=ParameterNames.NOMBRE_PRODUCTO%>">
                                 <button type="submit"><i class="ti-search"></i></button>
+                                
+                                <a href="/WholeSalesWeb/<%=ControllerPaths.PRODUCTO %>?action=<%=ActionNames.ADVANCED_SEARCH%>" ><p style="text-align: center; color:black">Buscador Avanzado</p></a>
                             </div>
                           </form>
                         </div>	

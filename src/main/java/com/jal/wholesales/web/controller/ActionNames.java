@@ -9,6 +9,8 @@ public class ActionNames {
 	public static final String SIGN_UP= "sing_up";
 	public static final String ADD = "añadir";
 	public static final String UPDATE = "update";
+	public static final String DELETE = "delete";
+	public static final String ADVANCED_SEARCH = "advanced_search";
 	 
  
 }

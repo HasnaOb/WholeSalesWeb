@@ -23,6 +23,7 @@
 		%>
 		<div  style="text-align: center;"  class="deal-of-week">
 			<h1>La empresa no existe</h1>
+			<h3><a href="/WholeSalesWeb<%=ViewPaths.EMPRESA_SEARCH %>"> Volver al buscador</a></h3>
 		</div>
 	<%	
 	}

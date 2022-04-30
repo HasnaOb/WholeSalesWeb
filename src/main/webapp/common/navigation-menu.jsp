@@ -22,9 +22,9 @@
                         <li><a href="./shop.jsp">Shop</a></li>
                         <li><a href="#">Collection</a>
                             <ul class="dropdown">
-                                <li><a href="#">Men's</a></li>
-                                <li><a href="#">Women's</a></li>
-                                <li><a href="#">Kid's</a></li>
+                                <li><a href="/WholeSalesWeb/producto?action=detail&seccionId=1">Men's</a></li>
+                                <li><a href="tuurl?idSeccion=2">Women's</a></li>
+                                <li><a href="tuurl?idSeccion=3">Kid's</a></li>
                             </ul>
                         </li>
                         <li><a href="./blog.html">Blog</a></li>

@@ -36,8 +36,8 @@ public class WebPagingUtils {
 		return pageTo;
 	}
 	
-	public static final Integer getTotalPages(int totalResults, int pageSize) {
-		return (int) Math.ceil((double) totalResults / (double) pageSize);
+	public static final Integer getTotalPages(long l, int pageSize) {
+		return (int) Math.ceil((double) l / (double) pageSize);
 	}
 	
 	/**
