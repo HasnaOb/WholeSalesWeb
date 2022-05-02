@@ -31,7 +31,7 @@
 			          <% } else { %>
  
 			          	<div class="icon user-profile">
-			            	<a href="/WholeSalesWebindex.jsp" class="login-panel"> Mi perfil (<%=empresa.getNombre()%>) </a>
+			            	<a href="/WholeSalesWeb/index.jsp" class="login-panel"> Mi perfil (<%=empresa.getNombre()%>) </a>
 			            	<a href="/WholeSalesWeb/<%=ViewPaths.EMPRESA_UPDATE %>" >Actualizar perfil</a>
  
 			            	<a href="/WholeSalesWeb/<%=ControllerPaths.EMPRESA%>?<%=ParameterNames.ACTION%>=<%=ActionNames.SIGN_OUT%>" class="login-panel"><i class="fa fa-user">Cerrar Sesión </i>  </a>
