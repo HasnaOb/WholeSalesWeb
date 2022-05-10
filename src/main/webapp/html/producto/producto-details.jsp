@@ -24,7 +24,7 @@
 		                                    </div>
 		                                    <div class="pi-text">
 		                                       
-		                                        <a href="#">
+		                                        <a href="product_Info.jsp">
 		                                            <h5><%=p.getNombre()%></h5>
 		                                        </a>
 		                                        <div class="product-price">

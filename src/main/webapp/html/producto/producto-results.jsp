@@ -142,7 +142,7 @@
 <div style="text-align: center;" class="deal-of-week">
 	<h1>El producto no existe</h1>
 	<h3>
-		<a href="<%=CONTEXT%><%=ViewPaths.PRODUCTO_SEARCH %>"> Volver al
+		<a href="/WholeSalesWeb<%=ViewPaths.PRODUCTO_SEARCH %>"> Volver al
 			buscador</a>
 	</h3>
 </div>

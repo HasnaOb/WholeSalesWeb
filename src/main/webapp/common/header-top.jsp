@@ -32,11 +32,11 @@
  
 			          	<div class="icon user-profile">
 			            	<a href="/WholeSalesWeb/index.jsp" class="login-panel"> Mi perfil (<%=empresa.getNombre()%>) </a>
-			            	<a href="/WholeSalesWeb/<%=ViewPaths.EMPRESA_UPDATE %>" >Actualizar perfil</a>
+			            	<a href="/WholeSalesWeb/<%=ViewPaths.EMPRESA_UPDATE %>" ><i class="fa fa-recycle" aria-hidden="true" style="color: black"></i></a>
  
-			            	<a href="/WholeSalesWeb/<%=ControllerPaths.EMPRESA%>?<%=ParameterNames.ACTION%>=<%=ActionNames.SIGN_OUT%>" class="login-panel"><i class="fa fa-user">Cerrar Sesión </i>  </a>
+			            	<a href="/WholeSalesWeb/<%=ControllerPaths.EMPRESA%>?<%=ParameterNames.ACTION%>=<%=ActionNames.SIGN_OUT%>" class="login-panel"><i class="fa fa-user"> Cerrar Sesión </i>  </a>
 			            	
-			            		<a href="/WholeSalesWeb/<%=ControllerPaths.EMPRESA%>?<%=ParameterNames.ACTION%>=<%=ActionNames.DELETE%>" class="login-panel"><i class="fa fa-user">Darse de baja </i>  </a>
+			            		<a href="/WholeSalesWeb/<%=ControllerPaths.EMPRESA%>?<%=ParameterNames.ACTION%>=<%=ActionNames.DELETE%>" class="login-panel"><i class="fa fa-user"> Darse de baja </i>  </a>
 			          	</div>
 			          	
 			          	
@@ -47,13 +47,7 @@
 		 
 			          <% } %>
 				 
-              
-                    <div class="top-social">
-                        <a href="https://www.facebook.com" target="_black"><i class="ti-facebook"></i></a>
-                        <a href="https://www.twitter.com" target="_black"><i class="ti-twitter-alt"></i></a>
-                        <a href="https://www.linkedin.com" target="_black"><i class="ti-linkedin"></i></a>
-                        <a href="#"><i class="ti-pinterest"></i></a>
-                    </div>
+               
                 </div>
             </div>
         </div>

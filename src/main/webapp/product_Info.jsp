@@ -21,18 +21,7 @@
                                     <i class="fa fa-search-plus"></i>
                                 </div>
                             </div>
-                            <div class="product-thumbs">
-                                <div class="product-thumbs-track ps-slider owl-carousel">
-                                    <div class="pt active" data-imgbigurl="img/product-single/product-1.jpg"><img
-                                            src="Imagenes/imgDetalle/<%=p.getId() %>/prin.jpg" alt=""></div>
-                                    <div class="pt" data-imgbigurl="img/product-single/product-2.jpg"><img
-                                            src="Imagenes/imgDetalle/<%=p.getId() %>/prin2.jpg" alt=""></div>
-                                    <div class="pt" data-imgbigurl="img/product-single/product-3.jpg"><img
-                                            src="img/product-single/product-3.jpg" alt=""></div>
-                                    <div class="pt" data-imgbigurl="img/product-single/product-3.jpg"><img
-                                            src="img/product-single/product-3.jpg" alt=""></div>
-                                </div>
-                            </div>
+                         
                         </div>
                         <div class="col-lg-6">
                             <div class="product-details">

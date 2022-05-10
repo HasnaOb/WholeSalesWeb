@@ -347,9 +347,11 @@ public class ProductoServlet extends HttpServlet {
 			try {
 				List<Marca> marcaList = marcaService.findByAll();
 				request.setAttribute(AttributeNames.MARCA, marcaList);
+				
 				List<Seccion> seccionList = seccionService.findByAll();
 				request.setAttribute(AttributeNames.SECCION, seccionList);
 				targetView = ViewPaths.PRODUCTO_SEARCH;
+				
 			} catch (ServiceException e) {
 				logger.error(e.getMessage(), e);
 				errors.addCommonError(Errors.ERROR_E);
